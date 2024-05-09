@@ -24,6 +24,33 @@ const JobDetails = () => {
     refetch()
     setRefreshing(false)
   }, []);
+  const displayTabContent = () => {
+    switch (activeTab) {
+      case "Qualifications":
+        return (
+          <Specifics
+            title='Qualifications'
+            points={data[0].job_highlights?.Qualifications ?? ["N/A"]}
+          />
+        );
+
+      case "About":
+        return ('taiwo'
+          // <JobAbout info={data[0].job_description ?? "No data provided"} />
+        );
+
+      case "Responsibilities":
+        return (
+          <Specifics
+            title='Responsibilities'
+            points={data[0].job_highlights?.Responsibilities ?? ["N/A"]}
+          />
+        );
+
+      default:
+        return null;
+    }
+  };
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
@@ -72,7 +99,7 @@ const JobDetails = () => {
                 setActiveTab={setActiveTab}
               />
 
-              {/* {displayTabContent()} */}
+              {displayTabContent()}
             </View>
           )
           }
