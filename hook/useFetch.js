@@ -6,7 +6,6 @@ const useFetch = (endpoint, query) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const axios = require('axios');
   // const Rapiskey= RAPIDAPI
   
 
@@ -14,7 +13,7 @@ const options = {
   method: 'GET',
   url: `https://jsearch.p.rapidapi.com/${endpoint}`,
   headers: {
-    'X-RapidAPI-Key': process.env.RAPIDAPI,
+    'X-RapidAPI-Key': '962623b957msh634367a7546e18ep1c121ejsnf9aea984cdb9',
     'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
   },
   params: {...query }
