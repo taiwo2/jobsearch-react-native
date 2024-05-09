@@ -2,7 +2,7 @@ import { Stack, useRouter, useLocalSearchParams} from "expo-router";
 import { useCallback, useState } from "react";
 import {View,Text,SafeAreaView,ScrollView,ActivityIndicator,RefreshControl,
 } from "react-native";
-import {Company,JobAboutJobFooter,JobTabs,ScreenHeaderBtn,Specifics,
+import {Company,JobAbout,JobFooter,JobTabs,ScreenHeaderBtn,Specifics,
 } from "../../components";
 import { COLORS, icons, SIZES } from "../../constants";
 import useFetch from "../../hook/useFetch";
@@ -35,8 +35,8 @@ const JobDetails = () => {
         );
 
       case "About":
-        return ('taiwo'
-          // <JobAbout info={data[0].job_description ?? "No data provided"} />
+        return (
+          <JobAbout info={data[0].job_description ?? "No data provided"} />
         );
 
       case "Responsibilities":
@@ -105,7 +105,7 @@ const JobDetails = () => {
           }
         </ScrollView>
 
-        {/* <JobFooter url={data[0]?.job_google_link ?? 'https://careers.google.com/jobs/results/'} /> */}
+        <JobFooter url={data[0]?.job_google_link ?? 'https://careers.google.com/jobs/results/'} />
       </>
     </SafeAreaView>
   );
