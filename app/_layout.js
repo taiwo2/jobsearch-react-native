@@ -11,23 +11,23 @@ SplashScreen.preventAutoHideAsync();
 // };
 
 const Layout = () => {
-  const [fontsLoaded] = useFonts({
-    DMBold: require("../assets/fonts/DMSans-Bold.ttf"),
-    DMMedium: require("../assets/fonts/DMSans-Medium.ttf"),
-    DMRegular: require("../assets/fonts/DMSans-Regular.ttf"),
-  });
+  // const [fontsLoaded] = useFonts({
+  //   DMBold: require("../assets/fonts/DMSans-Bold.ttf"),
+  //   DMMedium: require("../assets/fonts/DMSans-Medium.ttf"),
+  //   DMRegular: require("../assets/fonts/DMSans-Regular.ttf"),
+  // });
 
-  const onlayoutRootView = useCallback(async () => {
-    if (fontsLoaded){
-      await SplashScreen.hideAsync()
-    }
+  // const onlayoutRootView = useCallback(async () => {
+  //   if (fontsLoaded){
+  //     await SplashScreen.hideAsync()
+  //   }
+  // Stack onLayout={onlayoutRootView}/>
+  // },[fontsLoaded])
+  // if (!fontsLoaded) {
+  //   return null;
+  // }
 
-  },[fontsLoaded])
-  if (!fontsLoaded) {
-    return null;
-  }
-
-  return  <Stack onLayout={onlayoutRootView}/>
+  return  <Stack/>
   // (
    
   //   <Stack initialRouteName="home">
