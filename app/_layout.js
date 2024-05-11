@@ -1,9 +1,9 @@
 import { Stack } from "expo-router";
 import { useFonts } from "expo-font";
 import { useCallback } from "react";
-import * as SplashScreen from "expo-splash-screen";
+// import * as SplashScreen from "expo-splash-screen";
 
-SplashScreen.preventAutoHideAsync();
+// SplashScreen.preventAutoHideAsync();
 
 // export const unstable_settings = {
 //   // Ensure any route can link back to `/`
@@ -21,13 +21,12 @@ const Layout = () => {
   //   if (fontsLoaded){
   //     await SplashScreen.hideAsync()
   //   }
-  // Stack onLayout={onlayoutRootView}/>
   // },[fontsLoaded])
   // if (!fontsLoaded) {
-  //   return null;
+  //   return "walit";
   // }
 
-  return  <Stack/>
+  return <Stack />
   // (
    
   //   <Stack initialRouteName="home">
