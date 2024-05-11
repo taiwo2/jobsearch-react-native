@@ -4,9 +4,9 @@
 
 <style span{
   heigth: 50%
- } >
- ![Demo](./new.gif) 
- </style>
+ } ></style>
+ <span>![Demo](./new.gif) </span>
+
 
 ## Built With
 * HTML and JSX
